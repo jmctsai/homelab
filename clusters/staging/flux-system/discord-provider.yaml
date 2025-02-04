@@ -11,3 +11,6 @@ spec:
 
 # kubectl -n flux-system create secret generic discord-webhook-url \
 # --from-literal=address=https://discord.com/api/webhooks/YOUR/WEBHOOK/URL
+
+# Decode or Edit Secret:
+# https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/#decoding-secret
