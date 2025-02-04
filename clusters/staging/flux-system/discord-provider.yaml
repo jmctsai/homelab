@@ -1,0 +1,13 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: discord
+  namespace: flux-system
+spec:
+  type: discord
+  channel: "🔔丨server"
+  secretRef:
+    name: discord-webhook-url
+
+# kubectl -n flux-system create secret generic discord-webhook-url \
+# --from-literal=address=https://discord.com/api/webhooks/YOUR/WEBHOOK/URL
