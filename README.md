@@ -1,5 +1,7 @@
 # 🏡 Homelab
 
+Homelab following FluxCD monorepo structure
+
 # Cluster
 - Talos Linux
 
