@@ -4,5 +4,5 @@ namespace: linkding
 resources:
   - namespace.yaml
   - deployment.yaml
-  - persistent-volume-claim.yaml
+  - pvc.yaml
   - service.yaml
