@@ -1,20 +1,29 @@
+# FluxCD
+
+install flux on own system for debug
+
+```
+curl -s https://fluxcd.io/install.sh | sudo bash
+flux -v
+```
+
+
+## FluxCD Usage
+
 ```
 export GITHUB_TOKEN=<token>
 export GITHUB_USER=jmctsai
 export HOMELAB_REPO=homelab
-```
-<!-- export HOMELAB_REPO=https://github.com/jmctsai/homelab.git -->
-<!-- export HOMELAB_REPO=git@github.com:jmctsai/homelab.git -->
 
-```
 flux bootstrap github \
   --owner=$GITHUB_USER \
-  --repository=homelab \
+  --repository=$HOMELAB_REPO \
   --branch=main \
   --path=./clusters/staging/ \
   --personal
 ```
 
+### FluxCD Debug
 DEBUG flux deployment:
 - flux logs
 - flux events

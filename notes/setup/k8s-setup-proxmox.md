@@ -1,9 +1,4 @@
 # notes
-## FluxCD
-install flux on own system for debug
-
-curl -s https://fluxcd.io/install.sh | sudo bash
-flux -v
 
 ## Kubernetes cluster
 
