@@ -80,3 +80,6 @@ export WORKER02_IP=192.168.1.252
 talosctl upgrade --nodes $CONTROL_PLANE_IP --image $installer
 talosctl upgrade --nodes $WORKER01_IP --image $installer
 talosctl upgrade --nodes $WORKER02_IP --image $installer
+
+
+### proxmox k8s with qemu + sci (synology)
