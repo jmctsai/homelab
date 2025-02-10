@@ -1,0 +1,1 @@
+https://medium.com/containers-101/stop-using-branches-for-deploying-to-different-gitops-environments-7111d0632402
