@@ -68,18 +68,29 @@ talosctl apply-config --insecure --nodes $CONTROL_PLANE02_IP --file _out/control
 
 
 ### upgrade talos nodes
-#### bare-metal image with QEMU
-version=1.9.3
-installer=factory.talos.dev/installer/$schematic_id:v$version
+https://www.talos.dev/v1.9/talos-guides/upgrading-talos/
 
+#### proxmox talos k8s image with QEMU
+talos image includes:
+    - siderolabs/qemu-guest-agent
+
+VERSION=1.9.3
+IMAGE=factory.talos.dev/installer/$schematic_id:v$VERSION
+
+#### proxmox talos k8s image with QEMU + ISCSI (synology)
+talos image includes:
+    - siderolabs/iscsi-tools
+    - siderolabs/qemu-guest-agent
+
+VERSION=1.9.3
+SCHEMATIC_ID=dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586
+IMAGE=factory.talos.dev/installer/$SCHEMATIC_ID:v$VERSION
+
+#### shared upgrade commands
 export CONTROL_PLANE_IP=192.168.1.250
 export WORKER01_IP=192.168.1.251
 export WORKER02_IP=192.168.1.252
 
-
-talosctl upgrade --nodes $CONTROL_PLANE_IP --image $installer
-talosctl upgrade --nodes $WORKER01_IP --image $installer
-talosctl upgrade --nodes $WORKER02_IP --image $installer
-
-
-### proxmox k8s with qemu + sci (synology)
+talosctl upgrade --nodes $CONTROL_PLANE_IP --image $IMAGE
+talosctl upgrade --nodes $WORKER01_IP --image $IMAGE
+talosctl upgrade --nodes $WORKER02_IP --image $IMAGE
