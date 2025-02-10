@@ -1,9 +1,10 @@
-# notes
+# k8s setup
 
 ## Kubernetes cluster
 
 ### talos on proxmox
 https://www.talos.dev/v1.9/talos-guides/install/virtualized-platforms/proxmox/
+
 https://factory.talos.dev/image/ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515/v1.9.2/metal-amd64.iso
 
 #### image with QEMU guest agent for guest VM shutdown
