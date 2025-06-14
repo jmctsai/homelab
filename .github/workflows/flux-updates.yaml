@@ -30,7 +30,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.FLUX_BOOTSTRAP_GITHUB }}
           branch: update-flux
           commit-message: Update to ${{ steps.update.outputs.flux_version }}
           title: Update to ${{ steps.update.outputs.flux_version }}
