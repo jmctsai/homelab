@@ -1,6 +1,6 @@
 # 🏡 Homelab
 
-Homelab following FluxCD monorepo structure, inspiration from [Mischa's Kubernetes Homelab]https://github.com/mischavandenburg/homelab)
+Homelab following FluxCD monorepo structure, inspiration from [Mischa's Kubernetes Homelab](https://github.com/mischavandenburg/homelab)
 
 ## Cluster Provisioning
 - Talos Linux
