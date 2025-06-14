@@ -12,12 +12,10 @@ flux -v
 
 ```
 export GITHUB_TOKEN=<token>
-export GITHUB_USER=jmctsai
-export HOMELAB_REPO=homelab
 
 flux bootstrap github \
-  --owner=$GITHUB_USER \
-  --repository=$HOMELAB_REPO \
+  --owner=jmctsai \
+  --repository=homelab \
   --branch=main \
   --path=./clusters/staging/ \
   --personal
