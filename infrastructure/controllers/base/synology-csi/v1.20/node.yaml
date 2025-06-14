@@ -67,7 +67,7 @@ spec:
           image: registry.k8s.io/sig-storage/csi-node-driver-registrar:v2.3.0
           args:
             - --v=5
-            - --csi-address=$(ADDRESS)                         # the csi socket path inside the pod
+            - --csi-address=$(ADDRESS) # the csi socket path inside the pod
             - --kubelet-registration-path=$(REGISTRATION_PATH) # the csi socket path on the host node
           env:
             - name: ADDRESS
@@ -92,7 +92,7 @@ spec:
             - --nodeid=$(KUBE_NODE_NAME)
             - --endpoint=$(CSI_ENDPOINT)
             - --client-info
-            - /etc/synology/client-info.yml
+            - /home/johnny/personal/dev/synology-csi-talos/config/client-info.yml
             - --log-level=info
           env:
             - name: CSI_ENDPOINT

@@ -149,7 +149,7 @@ spec:
             - --nodeid=NotUsed
             - --endpoint=$(CSI_ENDPOINT)
             - --client-info
-            - /etc/synology/client-info.yml
+            - /home/johnny/personal/dev/synology-csi-talos/config/client-info.yml
             - --log-level=info
           env:
             - name: CSI_ENDPOINT
