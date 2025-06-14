@@ -14,9 +14,7 @@ kubectl create secret -n synology-csi generic client-info-secret --from-file=con
 <!-- debug: delete to recreate if need to make change -->
 k delete secret client-info-secret -n synology-csi
 
-<!-- credential to be used in controller.yaml your ghcr built image -->
+<!-- credential to be used in controller.yaml your locally built image pushed to ghcr -->
 GITHUB_USER=
 GH_PACKAGES_PAT=
 kubectl create secret docker-registry ghcr-login-secret --docker-server=https://ghcr.io --docker-username=$GITHUB_USER --docker-password=$GH_PACKAGES_PAT -n synology-csi
-
-
