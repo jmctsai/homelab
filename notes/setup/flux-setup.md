@@ -1,6 +1,9 @@
 # FluxCD
 
-install flux on own system for debug
+## upgrade flux
+brew upgrade flux
+
+## install flux on own system for debug
 
 ```
 curl -s https://fluxcd.io/install.sh | sudo bash
