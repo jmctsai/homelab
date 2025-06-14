@@ -3,3 +3,8 @@ kind: Kustomization
 resources:
   - storage-class.yaml
   - namespace.yaml
+  - controller.yaml
+  - node.yaml
+  - csi.driver.yaml
+  - snapshotter/snapshotter.yaml
+  - snapshotter/volume-snapshot-class.yaml
