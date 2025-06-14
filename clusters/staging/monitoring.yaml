@@ -10,5 +10,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./monitoring/alerts/cobalt
+  path: ./monitoring/alerts/staging
   prune: true

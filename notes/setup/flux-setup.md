@@ -15,12 +15,20 @@ flux -v
 
 ```
 export GITHUB_TOKEN=<token>
-
 flux bootstrap github \
   --owner=jmctsai \
   --repository=homelab \
   --branch=main \
   --path=./clusters/staging/ \
+  --personal
+
+
+export GITHUB_TOKEN=<token>
+flux bootstrap github \
+  --owner=jmctsai \
+  --repository=homelab \
+  --branch=main \
+  --path=./clusters/cobalt/ \
   --personal
 ```
 
