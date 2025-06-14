@@ -7,7 +7,7 @@ metadata:
 provisioner: csi.san.synology.com
 parameters:
   dsm: "192.168.1.249"
-  location: "Volume 1"
+  location: "Volume1"
   protocol: iscsi
   csi.storage.k8s.io/fstype: ext4
 reclaimPolicy: Delete
