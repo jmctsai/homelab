@@ -6,5 +6,5 @@ resources:
   - controller.yaml
   - node.yaml
   - csi.driver.yaml
-  - snapshotter/snapshotter.yaml
-  - snapshotter/volume-snapshot-class.yaml
+  # - snapshotter/snapshotter.yaml
+  # - snapshotter/volume-snapshot-class.yaml
