@@ -11,6 +11,7 @@ cp config/client-info-template.yml config/client-info.yml
 <!-- update client-info.yml -->
 
 kubectl create secret -n synology-csi generic client-info-secret --from-file=config/client-info.yml
+k delete secret client-info-secret -n synology-csi
 
 <!-- for ghcr built image -->
 GITHUB_USER=
