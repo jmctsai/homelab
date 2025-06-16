@@ -31,12 +31,12 @@ spec:
         env:
         - name: USER_NAME
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-user
         - name: USER_PWD
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: mongo-secret
               key: mongo-password
         - name: DB_URL
