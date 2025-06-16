@@ -1,0 +1,12 @@
+kubernetes YAML configuraltion file - 3 parts
+- default section
+  - apiVersion
+  - kind
+- metadata
+  - name
+  - label
+- specification
+  - every spec for the component
+  - specific to the 'kind' of configuration
+- status - automatically created by kubernetes
+  - desired <-> actual
