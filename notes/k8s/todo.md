@@ -2,4 +2,11 @@
 CSI
 CRD
 ESO
+SOPS
 statfulset
+CNI - cilium
+
+<!-- apps -->
+prometheus
+loki
+promtail
