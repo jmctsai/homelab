@@ -10,3 +10,5 @@ CNI - cilium
 prometheus
 loki
 promtail
+
+renovate bot - image change
