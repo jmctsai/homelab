@@ -1,4 +1,4 @@
-# SOPS using AGE
+# SOPS using AGE encryption
 
 ## AGE usage
 - use for SOPS operater kubernetes?
