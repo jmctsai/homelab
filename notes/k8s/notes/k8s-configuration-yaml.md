@@ -1,4 +1,4 @@
-kubernetes YAML configuraltion file - 3 parts
+kubernetes YAML configuration file - 3 parts
 - default section
   - apiVersion
   - kind
