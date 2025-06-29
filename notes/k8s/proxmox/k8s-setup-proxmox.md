@@ -3,14 +3,22 @@
 ## Kubernetes cluster
 
 ### talos on proxmox
-https://www.talos.dev/v1.9/talos-guides/install/virtualized-platforms/proxmox/
+<!-- v1.10 -->
+https://www.talos.dev/v1.10/talos-guides/install/virtualized-platforms/proxmox/
 
-https://factory.talos.dev/image/ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515/v1.9.2/metal-amd64.iso
+<!-- Schematic ID content -->
+talos image includes:
+    - siderolabs/iscsi-tools
+    - siderolabs/qemu-guest-agent
+
+<!-- Initial .iso for creating node -->
+https://factory.talos.dev/image/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586/v1.10.4/metal-amd64.iso
 
 #### image with QEMU guest agent for guest VM shutdown
 - also used for upgrading talos!!!
 
-schematic_id=ce4c980550dd2ab1b17bbf2b08801c7eb59418eafe8f279833297925d67c7515
+VERSION=1.10.4
+SCHEMATIC_ID=dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586
 export CONTROL_PLANE_IP=192.168.1.250
 export WORKER01_IP=192.168.1.251
 export WORKER02_IP=192.168.1.252
@@ -22,7 +30,7 @@ mkdir -p _out/
 - worker - 2 cpu 2g mem
 
 #### talos machine config
-install_image_url="factory.talos.dev/installer/$schematic_id:v1.9.2"
+install_image_url="factory.talos.dev/installer/$SCHEMATIC_ID:v$VERSION"
 talosctl gen config talos-proxmox-cluster https://$CONTROL_PLANE_IP:6443 --output-dir _out --install-image $install_image_url
 
 talosctl get disks --insecure --nodes $CONTROL_PLANE_IP
@@ -68,14 +76,6 @@ talosctl apply-config --insecure --nodes $CONTROL_PLANE02_IP --file _out/control
 
 
 ### upgrade talos nodes
-https://www.talos.dev/v1.9/talos-guides/upgrading-talos/
-
-#### proxmox talos k8s image with QEMU
-talos image includes:
-    - siderolabs/qemu-guest-agent
-
-VERSION=1.10.4
-IMAGE=factory.talos.dev/installer/$schematic_id:v$VERSION
 
 #### proxmox talos k8s image with QEMU + ISCSI (synology)
 talos image includes:
