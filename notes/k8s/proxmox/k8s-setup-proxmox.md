@@ -11,7 +11,7 @@ talos image includes:
     - siderolabs/iscsi-tools
     - siderolabs/qemu-guest-agent
 
-<!-- Initial .iso for creating node -->
+<!-- Proxmox - Download from URL - talos-VERSION-metal-amd64.iso -->
 https://factory.talos.dev/image/dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f6e95fc8586/v1.10.4/metal-amd64.iso
 
 #### image with QEMU guest agent for guest VM shutdown
