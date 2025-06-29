@@ -28,7 +28,7 @@ jobs:
           VERSION="$(flux -v)"
           echo "flux_version=$VERSION" >> $GITHUB_OUTPUT
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@38e0b6e68b4c852a5500a94740f0e535e0d7ba54 # v4
+        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7
         with:
           token: ${{ secrets.FLUX_BOOTSTRAP_GITHUB }}
           branch: update-flux
