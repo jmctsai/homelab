@@ -13,6 +13,7 @@ Homelab following FluxCD monorepo structure, inspiration from [Mischa's Kubernet
 
 ### Infrastructure
 - [Flux CD](https://fluxcd.io/)
+- [Renovate](https://www.mend.io/renovate/)
 - [Synology CSI Driver](https://github.com/zebernst/synology-csi-talos)
 
 ### Storage
