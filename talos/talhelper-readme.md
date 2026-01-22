@@ -9,7 +9,12 @@ docker run --rm --network host ghcr.io/siderolabs/booter:v0.1.0
 
 boot node over network PXE, will auto get talos, can close booter container
 
-All done on Ubuntu WSL on Windows
+Commands with talhelper all done from ubuntu WSL on windows
+# maybe need to wipe disk
+```sh
+talosctl get discoveredvolumes
+talosctl wipe disk <ID>
+```
 
 # Create `talconfig.yaml` defining cluster config
 
