@@ -14,6 +14,7 @@ flux -v
 ## FluxCD Usage
 
 ```
+flux check --pre
 export GITHUB_TOKEN=<token>
 flux bootstrap github \
   --owner=jmctsai \
