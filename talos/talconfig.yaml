@@ -1,7 +1,7 @@
 ---
 clusterName: homelab
-endpoint: https://192.168.3.1:6443
 talosVersion: v1.12.1
+endpoint: https://192.168.3.1:6443
 allowSchedulingOnMasters: true
 allowSchedulingOnControlPlanes: true
 nodes:
