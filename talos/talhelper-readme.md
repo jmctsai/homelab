@@ -84,3 +84,4 @@ echo "kubeconfig" >> ./clusterconfig/.gitignore
 https://budimanjojo.github.io/talhelper/latest/guides/
 update `talconfig.yaml`
 run `talhelper genconfig`
+generate talosctl cmd to apply `talhelper gencommand apply`

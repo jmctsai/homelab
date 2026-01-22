@@ -5,15 +5,15 @@ talosVersion: v1.12.1
 allowSchedulingOnMasters: true
 allowSchedulingOnControlPlanes: true
 nodes:
-  - hostname: master01
+  - hostname: node1
     ipAddress: 192.168.3.1
     installDisk: /dev/sda
     controlPlane: true
-  # - hostname: master02
+  # - hostname: node2
   #   ipAddress: 192.168.3.2
   #   installDisk: /dev/sda
   #   controlPlane: true
-  # - hostname: master03
+  # - hostname: node3
   #   ipAddress: 192.168.3.3
   #   installDisk: /dev/sda
   #   controlPlane: true
