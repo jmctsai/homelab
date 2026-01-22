@@ -1,8 +1,13 @@
 # preface
-download iso, launch on instance
-talos is runnin in RAM until config applied (specify to wipe - talosconfig)
 
-talhelper to setup talos cluster
+bootstrap with booter on a linux machine (vm ok, rpi)
+https://www.youtube.com/watch?v=vAt_9j7a0X4
+https://github.com/siderolabs/booter
+```sh
+docker run --rm --network host ghcr.io/siderolabs/booter:v0.1.0
+```
+
+boot node over network PXE, will auto get talos, can close booter container
 
 All done on Ubuntu WSL on Windows
 
