@@ -5,4 +5,4 @@ resources:
   # - linkding
   # - nginx
   # - podinfo
-  - demo-webapp
+  # - demo-webapp
