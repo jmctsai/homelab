@@ -1,0 +1,19 @@
+---
+clusterName: homelab
+endpoint: https://192.168.3.1:6443
+talosVersion: v1.12.1
+allowSchedulingOnMasters: true
+allowSchedulingOnControlPlanes: true
+nodes:
+  - hostname: master01
+    ipAddress: 192.168.3.1
+    installDisk: /dev/sda
+    controlPlane: true
+  # - hostname: master02
+  #   ipAddress: 192.168.3.2
+  #   installDisk: /dev/sda
+  #   controlPlane: true
+  # - hostname: master03
+  #   ipAddress: 192.168.3.3
+  #   installDisk: /dev/sda
+  #   controlPlane: true
