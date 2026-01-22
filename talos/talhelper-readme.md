@@ -27,7 +27,7 @@ sops and age installed
 
 # .gitignore
 `talhelper genconfig`
-clusterconfig/homelab-master01.yaml
+clusterconfig/homelab-<node_name>.yaml
 talosconfig
 
 > [!WARNING]
@@ -51,29 +51,29 @@ https://docs.siderolabs.com/talos/v1.12/getting-started/getting-started
 ## first node need bootstrap - any control plane
 ```sh
 # shell pre-req
-MASTER01_IP=192.168.3.1
+NODE1_IP=192.168.3.1
 KUBECONFIG="$HOME/git/homelab/talos/clusterconfig/kubeconfig"
 TALOSCONFIG="$HOME/git/homelab/talos/clusterconfig/talosconfig"
 ```
 
 ```sh
-talosctl bootstrap --nodes $MASTER01_IP --talosconfig=$TALOSCONFIG`
-talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$MASTER01_IP --file=./clusterconfig/homelab-master01.yaml
+talosctl bootstrap --nodes $NODE1_IP --talosconfig=$TALOSCONFIG`
+talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$NODE1_IP --file=./clusterconfig/homelab-node1.yaml
 
 # Repeat for additional machines
-talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$MASTER01_IP --file=./clusterconfig/homelab-master02.yaml
-talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$MASTER01_IP --file=./clusterconfig/homelab-master03.yaml
+talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$NODE1_IP --file=./clusterconfig/homelab-node2.yaml
+talosctl apply-config --talosconfig=$TALOSCONFIG --nodes=$NODE1_IP --file=./clusterconfig/homelab-node3.yaml
 ```
 
 ## get KUBECONFIG - https://docs.siderolabs.com/talos/v1.12/getting-started/getting-started#step-10:-get-kubernetes-access
 ### merge with local Kubernetes config
 ```sh
-talosctl kubeconfig --nodes $MASTER01_IP --talosconfig=$TALOSCONFIG
+talosctl kubeconfig --nodes $NODE1_IP --talosconfig=$TALOSCONFIG
 ```
 
 ### specify alternative file
 ```sh
-talosctl kubeconfig $KUBECONFIG --nodes $MASTER01_IP --talosconfig=$TALOSCONFIG
+talosctl kubeconfig $KUBECONFIG --nodes $NODE1_IP --talosconfig=$TALOSCONFIG
 ```
 #### make sure kubeconfig file is not uploaded to git
 ```sh

@@ -1,5 +1,3 @@
 talosconfig
 kubeconfig
-homelab-master01.yaml
-homelab-master02.yaml
 homelab-node1.yaml
