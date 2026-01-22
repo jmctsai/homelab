@@ -1,12 +1,12 @@
 # 🏡 Homelab
 
-Homelab following FluxCD monorepo structure, inspiration from [Mischa's Kubernetes Homelab](https://github.com/mischavandenburg/homelab)
+Kubernetes homelab following FluxCD monorepo structure
 
 ## Cluster Provisioning
 - Talos Linux
 
 ## Hardware
-- Control Plane and Worker Nodes as VMs on Proxmox
+- Control Plane and Worker Nodes with bare metal nodes
 
 ### Apps
 - [Homepage](https://gethomepage.dev/)
