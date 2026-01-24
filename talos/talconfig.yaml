@@ -2,24 +2,33 @@
 # Example: https://github.com/budimanjojo/talhelper/blob/master/example/talconfig.yaml
 clusterName: homelab
 talosVersion: v1.12.1
-endpoint: https://192.168.3.1:6443
+endpoint: https://192.168.3.2:6443
 domain: ${clusterDomain}
 allowSchedulingOnMasters: true
 allowSchedulingOnControlPlanes: true
 nodes:
-  - hostname: node1
-    ipAddress: 192.168.3.1
+  # - hostname: node1
+  #   ipAddress: 192.168.3.1
+  #   installDisk: /dev/nvme0n1
+  #   controlPlane: true
+  - hostname: node2
+    ipAddress: 192.168.3.2
     installDisk: /dev/nvme0n1
     controlPlane: true
-  # - hostname: node2
-  #   ipAddress: 192.168.3.2
-  #   installDisk: /dev/sda
-  #   controlPlane: true
   # - hostname: node3
   #   ipAddress: 192.168.3.3
   #   installDisk: /dev/sda
   #   controlPlane: true
 controlPlane:
+  # look into syntax for moving into ./patches/cilium-prep-patch.yaml
+  patches:
+    - |-
+      cluster:
+        network:
+          cni:
+            name: none
+        proxy:
+          disabled: true
   schematic:
     customization:
       systemExtensions:
