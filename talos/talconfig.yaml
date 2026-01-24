@@ -11,11 +11,6 @@ nodes:
     ipAddress: 192.168.3.1
     installDisk: /dev/nvme0n1
     controlPlane: true
-    schematic:
-      customization:
-        systemExtensions:
-          officialExtensions:
-            - siderolabs/iscsi-tools
   # - hostname: node2
   #   ipAddress: 192.168.3.2
   #   installDisk: /dev/sda
@@ -24,8 +19,9 @@ nodes:
   #   ipAddress: 192.168.3.3
   #   installDisk: /dev/sda
   #   controlPlane: true
-schematic:
-  customization:
-    systemExtensions:
-      officialExtensions:
-        - siderolabs/iscsi-tools
+controlPlane:
+  schematic:
+    customization:
+      systemExtensions:
+        officialExtensions:
+          - siderolabs/iscsi-tools
