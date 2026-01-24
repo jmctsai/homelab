@@ -30,7 +30,8 @@ sops and age installed
 `age-keygen -o <sops-config-dir>/age/keys.txt`
 ## create `.sops.yaml` where `talenv.sops.yaml` and `talsecrets.sops.yaml` lives
 
-## talenv.sops.yaml?? where do I use this
+edit .sops encrypted yaml
+`sops file.sops.yaml`
 
 # Encrypt secrets with sops
 `sops -e -i talsecret.sops.yaml`

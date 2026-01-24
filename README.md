@@ -1,6 +1,6 @@
 # 🏡 Homelab
 
-Kubernetes homelab following FluxCD monorepo structure
+Kubernetes homelab following FluxCD [monorepo structure](https://github.com/fluxcd/flux2-kustomize-helm-example)
 
 ## Cluster Provisioning
 - Talos Linux
