@@ -1,3 +1,8 @@
+# TODO: NEW
+https://docs.siderolabs.com/kubernetes-guides/csi/synology-csi
+
+
+# OLD
 https://www.talos.dev/v1.10/kubernetes-guides/configuration/synology-csi/
 https://github.com/zebernst/synology-csi-talos?tab=readme-ov-file#procedure
 
