@@ -4,7 +4,9 @@ bootstrap with booter on a linux machine (vm ok, rpi)
 https://www.youtube.com/watch?v=vAt_9j7a0X4
 https://github.com/siderolabs/booter
 ```sh
-docker run --rm --network host ghcr.io/siderolabs/booter:v0.1.0
+docker run --rm --network host ghcr.io/siderolabs/booter:v0.3.0
+# include iscsi-tool
+docker run --rm --network host ghcr.io/siderolabs/booter:v0.3.0 --talos-version=v1.12.2 --schematic-id=c9078f9419961640c712a8bf2bb9174933dfcf1da383fd8ea2b7dc21493f8bac
 ```
 
 boot node over network PXE, will auto get talos, can close booter container
