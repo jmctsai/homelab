@@ -3,6 +3,6 @@
 cluster:
   network:
     cni:
-      name: none
+      name: none # Disable default CNI - Cilium will provide networking
   proxy:
-    disabled: true
+    disabled: true # Disable kube-proxy - Cilium will handle load balancing with eBPF
