@@ -6,6 +6,7 @@ talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
 
 endpoint: https://192.168.3.2:6443
+allowSchedulingOnControlPlanes: true
 
 cniConfig:
   name: none
@@ -35,5 +36,8 @@ controlPlane:
           - siderolabs/iscsi-tools
 
   patches:
-    - "@./patches/controller/cluster.yaml"
     - "@./patches/controller/cilium-prep-patch.yaml"
+
+# inlineManifests:
+#   - name: cilium
+#     contents: "@./inlineManifests/cilium.yaml"
