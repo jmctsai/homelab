@@ -6,14 +6,14 @@ talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
 dnsDomain: "${domain}"
 
-endpoint: https://192.168.3.2:6443
+endpoint: https://192.168.3.1:6443
 allowSchedulingOnControlPlanes: true
 
 nodes:
-  # - hostname: node1
-  #   ipAddress: 192.168.3.1
-  #   installDisk: /dev/nvme0n1
-  #   controlPlane: true
+  - hostname: node1
+    ipAddress: 192.168.3.1
+    installDisk: /dev/nvme0n1
+    controlPlane: true
 
   - hostname: node2
     ipAddress: 192.168.3.2
