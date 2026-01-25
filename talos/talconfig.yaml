@@ -4,12 +4,10 @@ clusterName: homelab
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
+dnsDomain: "${domain}"
 
 endpoint: https://192.168.3.2:6443
 allowSchedulingOnControlPlanes: true
-
-cniConfig:
-  name: none
 
 nodes:
   # - hostname: node1
@@ -34,10 +32,5 @@ controlPlane:
       systemExtensions:
         officialExtensions:
           - siderolabs/iscsi-tools
-
   patches:
     - "@./patches/controller/cilium-prep-patch.yaml"
-
-# inlineManifests:
-#   - name: cilium
-#     contents: "@./inlineManifests/cilium.yaml"
