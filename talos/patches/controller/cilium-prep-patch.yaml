@@ -1,0 +1,8 @@
+---
+# https://docs.siderolabs.com/kubernetes-guides/cni/deploying-cilium#machine-config-preparation
+cluster:
+  network:
+    cni:
+      name: none
+  proxy:
+    disabled: true
