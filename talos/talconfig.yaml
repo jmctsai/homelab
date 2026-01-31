@@ -15,10 +15,10 @@ nodes:
     installDisk: /dev/nvme0n1
     controlPlane: true
 
-  - hostname: node2
-    ipAddress: 192.168.3.2
-    installDisk: /dev/nvme0n1
-    controlPlane: true
+  # - hostname: node2
+  #   ipAddress: 192.168.3.2
+  #   installDisk: /dev/nvme0n1
+  #   controlPlane: true
 
   # - hostname: node3
   #   ipAddress: 192.168.3.3
