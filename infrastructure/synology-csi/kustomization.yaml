@@ -4,5 +4,6 @@ namespace: synology-csi
 resources:
   - namespace.yaml
   - synology-csi.sops.yaml
+  - csi-driver.yaml
   - storage-class-retain.yaml
   - storage-class-default.yaml
