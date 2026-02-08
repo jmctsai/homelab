@@ -3,4 +3,4 @@ kind: Kustomization
 namespace: synology-csi
 resources:
   - namespace.yaml
-  # - synology-csi.sops.yaml
+  - synology-csi.sops.yaml
