@@ -37,3 +37,8 @@ spec:
               mountPath: /etc/linkding/data
           ports:
             - containerPort: 9090
+          env:
+            - name: LD_SUPERUSER_NAME
+              value: "admin"
+            - name: LD_SUPERUSER_PASSWORD
+              value: "changeme123"
