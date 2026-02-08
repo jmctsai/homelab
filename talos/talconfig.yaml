@@ -31,5 +31,8 @@ controlPlane:
       systemExtensions:
         officialExtensions:
           - siderolabs/iscsi-tools
+          # these 2 might not be necessary
+          # - siderolabs/btrfs
+          # - siderolabs/util-linux-tools
   patches:
     - "@./patches/controller/cilium-prep-patch.yaml"
