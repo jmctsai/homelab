@@ -1,3 +1,6 @@
+# .sops.yaml
+# This file tells SOPS which keys to use for encryption
+
 creation_rules:
   # Rule for files in the 'talos' directory (and subdirectories)
   - path_regex: 'talos/.*'

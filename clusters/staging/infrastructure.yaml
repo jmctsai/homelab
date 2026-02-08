@@ -12,6 +12,7 @@ spec:
     name: flux-system
   path: ./infrastructure
   prune: true
+  # Enable SOPS decryption
   decryption:
     provider: sops
     secretRef:
