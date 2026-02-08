@@ -19,8 +19,25 @@ Kubernetes homelab following FluxCD [monorepo structure](https://github.com/flux
 ### Storage
 - Synology RS815+
 
+## FluxCD Bootstrap
+
+```sh
+flux bootstrap github \
+  --owner=jmctsai \
+  --repository=homelab \
+  --branch=main \
+  --path=./clusters/staging/ \
+  --personal
+```
+
 ## Secrets
-- TBD
+
+- SOPS Age
+```sh
+k create secret generic sops-age \
+--from-file=age.agekey=$HOME/.config/sops/key.txt \
+-n flux-system
+```
 
 
 ## Repository structure
