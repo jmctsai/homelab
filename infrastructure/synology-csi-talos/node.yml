@@ -95,6 +95,7 @@ spec:
             - /etc/synology/client-info.yml
             - --log-level=info
             - --chroot-dir=/host
+            # https://github.com/SynologyOpenSource/synology-csi/pull/85#issuecomment-2408928905
             - --iscsiadm-path=/usr/local/sbin/iscsiadm
           env:
             - name: CSI_ENDPOINT
