@@ -1,5 +1,4 @@
 ---
-domain: cluster.local
 # renovate: datasource=docker depName=ghcr.io/siderolabs/installer
 talosVersion: v1.12.3
 # renovate: datasource=docker depName=ghcr.io/siderolabs/kubelet

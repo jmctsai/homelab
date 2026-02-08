@@ -4,7 +4,6 @@ clusterName: homelab
 
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
-dnsDomain: "${domain}"
 
 endpoint: https://192.168.3.1:6443
 allowSchedulingOnControlPlanes: true
