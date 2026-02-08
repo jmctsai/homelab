@@ -144,7 +144,7 @@ spec:
             capabilities:
               add: ["SYS_ADMIN"]
             allowPrivilegeEscalation: true
-          image: ghcr.io/jmctsai/synology-csi:v1.2.1
+          image: synology/synology-csi:v1.2.1
           args:
             - --nodeid=NotUsed
             - --endpoint=$(CSI_ENDPOINT)
@@ -161,8 +161,6 @@ spec:
             - name: client-info
               mountPath: /etc/synology
               readOnly: true
-      imagePullSecrets:
-        - name: ghcr-login-secret
       volumes:
         - name: socket-dir
           emptyDir: {}
