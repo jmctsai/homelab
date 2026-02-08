@@ -1,22 +1,22 @@
 apiVersion: v1
 kind: Secret
 metadata:
-    name: discord-webhook
-    namespace: flux-system
+  name: discord-webhook
+  namespace: flux-system
 stringData:
-    address: ENC[AES256_GCM,data:h+xBTgyStxL9XSRRoXJZmRTUFJ+7AsODtW0ugRVoFsts64vSmphA/1fPWEQYlzn3qjy8l5J/fgvF0g7rhj4sZba4U7FQgT5nhWxcS12ZnEZ/7/9XOS2vZnZCVj0+RGIZNnVoG/uDOqOzaB/hVOpk40NpqsbiyobG6Q==,iv:JPhVdLiemAZwuF7o1rP3EH+/GXOUiqBoJylVQgkFJlo=,tag:RAtaP/8F/Kll+yKArwLC/Q==,type:str]
+  address: ENC[AES256_GCM,data:h+xBTgyStxL9XSRRoXJZmRTUFJ+7AsODtW0ugRVoFsts64vSmphA/1fPWEQYlzn3qjy8l5J/fgvF0g7rhj4sZba4U7FQgT5nhWxcS12ZnEZ/7/9XOS2vZnZCVj0+RGIZNnVoG/uDOqOzaB/hVOpk40NpqsbiyobG6Q==,iv:JPhVdLiemAZwuF7o1rP3EH+/GXOUiqBoJylVQgkFJlo=,tag:RAtaP/8F/Kll+yKArwLC/Q==,type:str]
 sops:
-    age:
-        - recipient: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBtWEE3dmdsTjh0RkJlMmQw
-            TTd5TXZKWnc3UXB0cmU2MmdUaTdOM21zU2xvCkk3SkxyNVJWVUNMMkpZc1lVOHc1
-            S0NYNjdmdUkzb2tkUUJlOFdrZEJoSjgKLS0tIFhtMWF0bExJRk11c3U1VVhsVGNB
-            M0crQ0t1TXVsRTdEVEVJRXFEWVhrWjQKNtNO9dmUwwCx1BYMrkK+2nZiCNpJwjL8
-            lCtgSpN5xyjEw8kbiFpVSo0xwp2vWVlAzG5vPaQpHGh9L62ig7iuVg==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2026-02-08T06:55:56Z"
-    mac: ENC[AES256_GCM,data:8ytF4/OD1V8/yZ+RIVyLm8CItzEsTObSdoSdotSCQU+knD1yauIv5gzyD/f3fBRUA9SUDtHH4T88ADynqPslioVzGefsfSqR1Kn7mHD9QVbG49iETwI6+AsW/1YjitHzZwZjzP8OiREHG/cIX6DXsHqf/LkFm7WJVNvXUmSbiwI=,iv:E+LBlxgUhX5nTBnU1Ido+pIrFNtoZqKhTcZ6ljCN3e8=,tag:vmOufsPyiBB3kNtm/ifA/g==,type:str]
-    encrypted_regex: ^(data|stringData)$
-    version: 3.11.0
+  age:
+    - recipient: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBtWEE3dmdsTjh0RkJlMmQw
+        TTd5TXZKWnc3UXB0cmU2MmdUaTdOM21zU2xvCkk3SkxyNVJWVUNMMkpZc1lVOHc1
+        S0NYNjdmdUkzb2tkUUJlOFdrZEJoSjgKLS0tIFhtMWF0bExJRk11c3U1VVhsVGNB
+        M0crQ0t1TXVsRTdEVEVJRXFEWVhrWjQKNtNO9dmUwwCx1BYMrkK+2nZiCNpJwjL8
+        lCtgSpN5xyjEw8kbiFpVSo0xwp2vWVlAzG5vPaQpHGh9L62ig7iuVg==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2026-02-08T06:55:56Z"
+  mac: ENC[AES256_GCM,data:8ytF4/OD1V8/yZ+RIVyLm8CItzEsTObSdoSdotSCQU+knD1yauIv5gzyD/f3fBRUA9SUDtHH4T88ADynqPslioVzGefsfSqR1Kn7mHD9QVbG49iETwI6+AsW/1YjitHzZwZjzP8OiREHG/cIX6DXsHqf/LkFm7WJVNvXUmSbiwI=,iv:E+LBlxgUhX5nTBnU1Ido+pIrFNtoZqKhTcZ6ljCN3e8=,tag:vmOufsPyiBB3kNtm/ifA/g==,type:str]
+  encrypted_regex: ^(data|stringData)$
+  version: 3.11.0
