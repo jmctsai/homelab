@@ -1,4 +1,10 @@
 creation_rules:
+  # Rule for files in the 'talos' directory (and subdirectories)
+  - path_regex: 'talos/.*'
+    age: >-
+      age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+
+  # Default rule for all other files
   - encrypted_regex: '^(data|stringData)$'
     age: >-
       age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
