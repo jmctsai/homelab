@@ -7,7 +7,8 @@ creation_rules:
     age: >-
       age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
 
-  # Default rule for all other files
-  - encrypted_regex: '^(data|stringData)$'
+  # Default rule for all other files ending in .sops.yaml
+  - path_regex: '(^|/).+\\.sops\\.yaml$'
+    encrypted_regex: '^(data|stringData|id|secret|bootstraptoken|secretboxencryptionsecret|token|crt|key)$'
     age: >-
       age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
