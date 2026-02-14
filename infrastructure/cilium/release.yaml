@@ -58,8 +58,9 @@ spec:
       ui:
         enabled: true
 
-    k8sServiceHost: localhost
-    k8sServicePort: 7445
+    # only works from my worksation when using Talos API proxy
+    # k8sServiceHost: localhost
+    # k8sServicePort: 7445
 
     gatewayAPI:
       enabled: true
