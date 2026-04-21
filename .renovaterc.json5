@@ -9,7 +9,7 @@
     ":disableRateLimiting",
     ":semanticCommits"
   ],
-  "dependencyDashboard": true,
+  "dependencyDashboard": false,
   "dependencyDashboardTitle": "Renovate Dashboard 🤖",
   "schedule": ["every weekend"],
   "ignorePaths": ["**/*.sops.*"],
