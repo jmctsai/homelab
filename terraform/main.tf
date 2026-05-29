@@ -135,6 +135,7 @@ data "talos_machine_configuration" "control_machine_config" {
         }
       }
     }),
+    # Tell the nodes to use the VIP for the Kubernetes API endpoint
     yamlencode({
       machine = {
         network = {
