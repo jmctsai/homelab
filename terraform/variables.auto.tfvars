@@ -3,6 +3,7 @@ virtual_environment_endpoint = "https://192.168.1.199:8006/"
 
 # Nodes
 gateway_ip = "192.168.0.1"
+cluster_vip  = "192.168.3.200"
 nodes = [
   {
     node_name = "pve02"
@@ -36,5 +37,3 @@ talos_image_factory_id = "dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f
 
 kubernetes_version = "1.35.2"
 cluster_name       = "talos-cluster"
-
-cluster_vip  = "192.168.3.200"
