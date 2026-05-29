@@ -6,9 +6,6 @@ terraform apply
 terraform output -raw talosconfig > talosconfig.yaml
 terraform output -raw kubeconfig > kubeconfig.yaml
 
-export KUBECONFIG=./kubeconfig.yaml
-export TALOSCONFIG=./talosconfig.yaml
-
 talosctl health -n 192.168.3.200
 kubectl get pods -A
 
@@ -33,11 +30,21 @@ helm install cilium cilium/cilium \
 <!-- apply cilium load balancing -->
 kubectl apply -f cilium_config.yaml
 
-<!-- Test -->
+
+---
+<!-- Everything before this is now bootstrapped by Just -->
+
+<!-- Manual Test -->
+export KUBECONFIG=./infrastructure/kubeconfig.yaml
+export TALOSCONFIG=./infrastructure/talosconfig.yaml
+
 kubectl run nginx --image=nginx --port=80
 kubectl expose pod nginx --type=LoadBalancer --port=80
+
 kubectl get svc nginx
 
+kubectl delete pod nginx
+kubectl delete svc nginx
 
 <!-- Teardown -->
 terraform destroy
