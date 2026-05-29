@@ -37,4 +37,4 @@ talos_image_factory_id = "dc7b152cb3ea99b821fcb7340ce7168313ce393d663740b791c36f
 kubernetes_version = "1.35.2"
 cluster_name       = "talos-cluster"
 
-cluster_vip  = "192.168.3.199"
+cluster_vip  = "192.168.3.200"
