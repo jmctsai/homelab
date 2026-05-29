@@ -147,6 +147,14 @@ data "talos_machine_configuration" "control_machine_config" {
           }]
         }
       }
+    }),
+    # Add additional nameservers to ensure the nodes can resolve external domains
+    yamlencode({
+      machine = {
+        network = {
+          nameservers = ["192.168.0.1", "1.1.1.1"]
+        }
+      }
     })
   ]
 }
