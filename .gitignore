@@ -1,0 +1,9 @@
+# Terraform files to ignore
+secret.auto.tfvars
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+
+kubeconfig.yaml
+talosconfig.yaml
