@@ -7,3 +7,8 @@ init *args:
 [working-directory('../infrastructure')]
 apply *args:
     terraform apply {{args}}
+
+[doc("terraform destroy")]
+[working-directory('../infrastructure')]
+destroy *args:
+    terraform destroy {{args}}

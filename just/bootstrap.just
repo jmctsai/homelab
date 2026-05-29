@@ -38,7 +38,6 @@ cilium: wait_for_api
     kubectl apply -f bootstrap/cilium_config.yaml
     talosctl health -n 192.168.3.200 --wait-timeout 10m
 
-
 [private]
 wait_for_api:
     until kubectl get nodes 2>/dev/null | grep -q "NotReady\|Ready"; do sleep 5; done
