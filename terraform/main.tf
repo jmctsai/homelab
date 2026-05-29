@@ -117,6 +117,24 @@ data "talos_machine_configuration" "control_machine_config" {
         allowSchedulingOnControlPlanes = true
       }
     }),
+    # Disables the Flannel, the default CNI for Talos
+    yamlencode({
+      cluster = {
+        network = {
+          cni = {
+            name = "none"
+          }
+        }
+      }
+    }),
+    # Disables kube-proxy, the default proxy service
+    yamlencode({
+      cluster = {
+        proxy = {
+          disabled = true
+        }
+      }
+    }),
     yamlencode({
       machine = {
         network = {
