@@ -35,7 +35,7 @@ flux bootstrap github \
   --owner=jmctsai \
   --repository=homelab \
   --branch=main \
-  --path=./clusters/staging/ \
+  --path=./gitops/clusters/staging/ \
   --personal
 ```
 
