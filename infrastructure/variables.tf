@@ -1,6 +1,10 @@
-# Proxmox
-variable "ssh_username" {
+# ── Proxmox ────────────────────────────────────────────
+variable "pve_endpoint"  { type = string }
+variable "ssh_username"  { type = string }
+
+variable "api_token" {
   type      = string
+  sensitive = true
 }
 
 variable "ssh_password" {
@@ -8,36 +12,25 @@ variable "ssh_password" {
   sensitive = true
 }
 
-variable "api_token" {
-  type      = string
-  sensitive = true
+# ── Network ────────────────────────────────────────────
+variable "gateway_ip"  { type = string }
+variable "cluster_vip" { type = string }
+
+# ── Nodes ──────────────────────────────────────────────
+variable "nodes" {
+  description = "List of nodes and their configurations."
+  type = list(object({
+    node_name = string
+    hostname  = string
+    vm_id     = number
+    ip        = string
+    cores     = number
+    memory    = number
+  }))
 }
 
-variable "virtual_environment_endpoint" {
-  type      = string
-}
-
-variable "gateway_ip" {
-  type      = string
-}
-
-# Talos Linux
-variable "talos_version" {
-  type      = string
-}
-
-variable "talos_image_factory_id" {
-  type      = string
-}
-
-variable "kubernetes_version" {
-  type      = string
-}
-
-variable "cluster_name" {
-  type      = string
-}
-
-variable "cluster_vip" {
-  type      = string
-}
+# ── Talos ──────────────────────────────────────────────
+variable "talos_version"          { type = string }
+variable "talos_image_factory_id" { type = string }
+variable "kubernetes_version"     { type = string }
+variable "cluster_name"           { type = string }

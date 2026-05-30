@@ -1,3 +1,4 @@
+# ── Providers ──────────────────────────────────────────
 terraform {
   required_providers {
     proxmox = {
@@ -11,10 +12,12 @@ terraform {
   }
 }
 
+# ── Proxmox ────────────────────────────────────────────
 provider "proxmox" {
-  endpoint  = var.virtual_environment_endpoint
+  endpoint  = var.pve_endpoint
   api_token = var.api_token
   insecure  = true
+
   ssh {
     agent    = false
     username = var.ssh_username

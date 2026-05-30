@@ -3,6 +3,11 @@
 init *args:
     terraform init {{args}}
 
+[doc("terraform plan")]
+[working-directory('../infrastructure')]
+plan *args:
+    terraform plan {{args}}
+
 [doc("terraform apply")]
 [working-directory('../infrastructure')]
 apply *args:
