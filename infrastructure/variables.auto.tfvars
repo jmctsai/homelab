@@ -6,7 +6,7 @@ gateway_ip = "192.168.0.1"
 cluster_vip  = "192.168.3.200"
 nodes = [
   {
-    node_name = "pve02"
+    node_name = "pve"
     hostname  = "talos-cp1"
     vm_id     = 201
     ip        = "192.168.3.201"
@@ -14,7 +14,7 @@ nodes = [
     memory    = 2 * 1024,
   },
   {
-    node_name = "pve03"
+    node_name = "pve02"
     hostname  = "talos-cp2"
     vm_id     = 202
     ip        = "192.168.3.202"
@@ -22,10 +22,18 @@ nodes = [
     memory    = 2 * 1024,
   },
   {
-    node_name = "pve04"
+    node_name = "pve03"
     hostname  = "talos-cp3"
     vm_id     = 203
     ip        = "192.168.3.203"
+    cores     = 2
+    memory    = 2 * 1024,
+  },
+  {
+    node_name = "pve04"
+    hostname  = "talos-cp4"
+    vm_id     = 204
+    ip        = "192.168.3.204"
     cores     = 2
     memory    = 2 * 1024,
   }
