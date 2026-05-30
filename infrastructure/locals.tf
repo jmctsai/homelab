@@ -1,3 +1,5 @@
+# Locals are values computed inside Terraform, derived from variables or other locals.
+# Add a local here for any value that is calculated, transformed, or composed from other values.
 locals {
   # ── Proxmox ──────────────────────────────────────────
   lvm_datastore = {

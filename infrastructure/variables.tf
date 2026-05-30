@@ -1,3 +1,5 @@
+# Variables are inputs provided from outside Terraform (tfvars, .env, CLI).
+# Add a variable here for any value that changes per environment or is secret.
 # ── Proxmox ────────────────────────────────────────────
 variable "pve_endpoint"  { type = string }
 variable "ssh_username"  { type = string }
