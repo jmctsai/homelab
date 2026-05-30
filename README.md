@@ -21,6 +21,13 @@ Kubernetes homelab following FluxCD [monorepo structure](https://github.com/flux
 ### Storage
 - Synology RS815+
 
+## Stack Bootstrap
+
+```
+just bootstrap full
+```
+
+# TODO: add into bootstrap with just
 ## FluxCD Bootstrap
 
 ```sh
