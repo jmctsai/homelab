@@ -12,12 +12,11 @@ creation_rules:
     age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
     encrypted_regex: '^(certificate-authority-data|client-certificate-data|client-key-data)$'
 
-  # # Rule for files in the 'gitops/talos' directory (and subdirectories)
-  # - path_regex: '^gitops/talos/.*'
-  #   age: >-
-  #     age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+  - path_regex: infrastructure/sealed-secrets-key(\.encrypted)?.yaml$
+    age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
 
-  # Default rule for all other files ending in .sops.yaml
   - path_regex: \.tfvars$
-    age: >-
-      age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+    age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+
+  - path_regex: \.tfstate$
+    age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
