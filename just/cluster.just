@@ -10,3 +10,4 @@ cluster:
 create_cluster_config:
     terraform output -raw talosconfig > talosconfig.yaml
     terraform output -raw kubeconfig > kubeconfig.yaml
+    just secrets::encrypt_cluster_config

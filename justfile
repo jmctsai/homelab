@@ -1,6 +1,7 @@
 mod bootstrap 'just/bootstrap.just'
 mod cilium 'just/cilium.just'
 mod cluster 'just/cluster.just'
+mod secrets 'just/secrets.just'
 mod tf 'just/tf.just'
 
 # With this `just` will give you a list of the modules.

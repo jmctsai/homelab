@@ -1,10 +1,11 @@
 # Terraform files to ignore
-secret.auto.tfvars
 .terraform/
 .terraform.lock.hcl
 .terraform.tfstate.lock.info
-*.tfstate
-*.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
 
+# Secrets and configs to ignore
+secrets.auto.tfvars
 kubeconfig.yaml
 talosconfig.yaml

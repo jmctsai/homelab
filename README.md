@@ -27,6 +27,17 @@ Kubernetes homelab following FluxCD [monorepo structure](https://github.com/flux
 just bootstrap full
 ```
 
+## Secrets
+
+- SOPS + Age
+Create and ensure keys.txt is store somehwere safe (Proton Pass)
+
+```sh
+mkdir -p ~/.config/sops/age
+age-keygen -o ~/.config/sops/age/keys.txt
+```
+
+
 # TODO: add into bootstrap with just
 ## FluxCD Bootstrap
 
@@ -37,13 +48,4 @@ flux bootstrap github \
   --branch=main \
   --path=./gitops/clusters/staging/ \
   --personal
-```
-
-## Secrets
-
-- SOPS Age
-```sh
-k create secret generic sops-age \
---from-file=age.agekey=$HOME/.config/sops/key.txt \
--n flux-system
 ```

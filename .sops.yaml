@@ -2,12 +2,22 @@
 # This file tells SOPS which keys to use for encryption
 
 creation_rules:
-  # Rule for files in the 'talos' directory (and subdirectories)
-  - path_regex: '^talos/.*'
-    age: >-
-      age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+  # Rule for the 'infrastructure/talosconfig.yaml' file
+  - path_regex: infrastructure/talosconfig(\.encrypted)?.yaml$
+    age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+    encrypted_regex: '^(ca|crt|key)$'
+
+  # Rule for the 'infrastructure/kubeconfig.yaml' file
+  - path_regex: infrastructure/kubeconfig(\.encrypted)?.yaml$
+    age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+    encrypted_regex: '^(certificate-authority-data|client-certificate-data|client-key-data)$'
+
+  # # Rule for files in the 'gitops/talos' directory (and subdirectories)
+  # - path_regex: '^gitops/talos/.*'
+  #   age: >-
+  #     age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
 
   # Default rule for all other files ending in .sops.yaml
-  - encrypted_regex: '^(data|stringData)$'
+  - path_regex: \.tfvars$
     age: >-
       age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
