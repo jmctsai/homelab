@@ -1,8 +1,0 @@
----
-# https://docs.siderolabs.com/kubernetes-guides/cni/deploying-cilium#machine-config-preparation
-cluster:
-  network:
-    cni:
-      name: none # Disable default CNI - Cilium will provide networking
-  proxy:
-    disabled: true # Disable kube-proxy - Cilium will handle load balancing with eBPF
