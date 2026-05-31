@@ -1,25 +1,29 @@
 # 🏡 Homelab
 
-Kubernetes homelab following FluxCD [monorepo structure](https://github.com/fluxcd/flux2-kustomize-helm-example)
+Kubernetes homelab setup with Talos Linux, automated with Terraform and GitOps with Jonas Hietala's [Modern Kubernetes homelab](https://www.jonashietala.se/series/kube-homelab/)
 
 ## Cluster Provisioning
 - Talos Linux automated with Terraform
 
-## Hardware
-- Proxmox VM
+### Hardware
+- Proxmox Cluster
+  - Lenovo ThinkCenter M90q Gen 1
+  - Lenovo ThinkCenter M90q Gen 1
+  - Gigabyte Brix
 
-### Apps
+- NAS
+  - Synology RS815+
+
+### Services
 - [Homepage](https://gethomepage.dev/)
 
 ### Infrastructure
-- [Terraform-Proxmox](https://registry.terraform.io/providers/bpg/proxmox)
-- [Terraform-Talos](https://registry.terraform.io/providers/siderolabs/talos)
+- [Terraform](https://developer.hashicorp.com/terraform)
+  - [Terraform-Proxmox](https://registry.terraform.io/providers/bpg/proxmox)
+  - [Terraform-Talos](https://registry.terraform.io/providers/siderolabs/talos)
 - [Flux CD](https://fluxcd.io/)
 - [Renovate](https://www.mend.io/renovate/)
 - [Synology CSI Driver](https://github.com/zebernst/synology-csi-talos)
-
-### Storage
-- Synology RS815+
 
 ## Stack Bootstrap
 
@@ -28,8 +32,8 @@ just bootstrap full
 ```
 
 ## Secrets
-
 - SOPS + Age
+
 Create and ensure keys.txt is store somehwere safe (Proton Pass)
 
 ```sh
@@ -38,14 +42,8 @@ age-keygen -o ~/.config/sops/age/keys.txt
 ```
 
 
-# TODO: add into bootstrap with just
-## FluxCD Bootstrap
-
-```sh
-flux bootstrap github \
-  --owner=jmctsai \
-  --repository=homelab \
-  --branch=main \
-  --path=./gitops/clusters/staging/ \
-  --personal
-```
+# TODO:
+- GitOps (FluxCD/ArgosCD) Bootstrap
+- Domain, certificates, DNS
+- Data & Storage
+- SSO
