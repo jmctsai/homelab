@@ -12,9 +12,11 @@ creation_rules:
     age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
     encrypted_regex: '^(certificate-authority-data|client-certificate-data|client-key-data)$'
 
+  # Rule for the 'infrastructure/sealed-secrets-key.yaml' file
   - path_regex: infrastructure/sealed-secrets-key(\.encrypted)?.yaml$
     age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
 
+  # Rule for terraform state and variable files
   - path_regex: \.tfvars$
     age: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
 

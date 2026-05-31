@@ -1,0 +1,31 @@
+context: talos-cluster
+contexts:
+    talos-cluster:
+        endpoints:
+            - 192.168.3.201
+            - 192.168.3.202
+            - 192.168.3.203
+            - 192.168.3.204
+        nodes:
+            - 192.168.3.201
+            - 192.168.3.202
+            - 192.168.3.203
+            - 192.168.3.204
+        ca: ENC[AES256_GCM,data:4KOwqsMUvvgzM+dK8u1wqhpcaQomqAAuIajg9ulJd9JhYz+HjSV4Xn81HZMFcN1gwEqt/JEpm2hWgWDJlh/9AnHMJZRy7V7gvOfLU+15RXZhj8nc9GURhhKNjOSrUTO2dlu2dGRPD46gKOWcB48BPV3840/lx/oA9/ODfaJj+nNMIxaV07fUcOlMEtorVKybS7nMTBzTst4o8hrSQU8d9WHRa0irJu+jliHMa3QrSFg6dEruAsCOUCm9gbOvmYI7hq2QlUbLqN3pN/pROYdSJeYTJqVHIvr8k/IHDqX3YXF/j+4sVRfJnOZgAuFIbxLvrPJeXJUAq7w6LeknnaZqMvbK/rqj2+fp9PEmSgYEKvspC3yiBsl0vW0pZIUSMxNF4DAaMkBjk/8hFOfLtFF4bkpqGsSYXHnNO3WhZ6w3l5arWVjpa+wvTu0WO2tucQQP63ex7PSWsjlTTkZh1Rh/ss/7LQn9+dbnsBk87oumsk0K4APDNmrp/U3ItPVn4y3oLFeqKCZWWMNG+pzVyux5bbzaHZibwn4aGsiCj3hexCOF1NMTZzeC/VKN1tUHEVvI6MfiNaLfxEGiTCn1C7yFWwOVLQD46ANFUDxZR/6PJkz++Xx/c5pvdaCMfJHoJTn1lXloSqzsU7FkjvaQTV8LArpF5L7UpzVNbGx6IKWPtOIL2Bg8plA0vWxennpWqc3/x1kmwjC2Ny7hF5/4tOhgrSI/WX88Sabz5izGixql9xaMG9+oPotIH91946XaVgml2lrgPdPkCE8yRUIgo0oCzrkBoXEH0nb0g9jrUOCo8ATmmJb+r8eSt69OEICEU//uu5TvEKZdRVVcJhBIn2kg4bk/EhkqBa9DZtS9iAY+30BpVjgw,iv:WSaNDGAnQ6J5zx/q3zx8wey8ehJQHXG61r5/YC83acI=,tag:BdG2eIFDJsr5e5dGsv8qfw==,type:str]
+        crt: ENC[AES256_GCM,data:w3h723zmAIV7ekw51cY2nILEnooY3IMaN9iR8RlYX8dc4H3hSeV1wijABiSOpmXutf8ZKkmEUb0DVBCrZuuX687dLD82TaAbNGbpcyVwzpxsIjrKwzTr4M/u/uVXatvcNmcBBCQXQc4PyGEgJCPV68isFJCCfLThTQutYYqOWH9Qwyptddx+DdiAgGcbGYCJCvo+g3Veq6j1if+zCzuApYCp4gFiibXqLSzCwYoL+8+72m74IeB28saf7QeV3ANOU6T3v9e2d4tnoISVTUDeA+ofVQHRAdszsZ5tNvTUx2WXSyPk1e8I8ac8p+lMS3HKUIAH8dl1+M824gZBtI7dxXi06pNL4sS2yp71287vpzcBv+WLdvHHJ5IYk6xNpu/oO/wb83Ah8MEK0X4KrxWqkyVHz4GLK7pSykiabtMS3CUxVbzoHSf4tOlM7jB2zPCQFGsFiLBE/1baLFvqpKhr3nKzUxul8BvVxAINPvPCqBj8D4y0GVwRJACZSMfbA93obAmoPy9Ob/WBqgOCYARJms9tH1BLmtxng5iwXvQNjTVfSEJwjwpFbFrI9PeiYly6pmyQGJTgPJUYV0Z0rUjWvrKOXEcEVqypDV3QIQ6C+kwDUJJOpRGhvVncXwF6bs1Vhf4hcBmKOlRDMqdXeEKA0vpuktxSxt36ScXkvhbHhh29oZG2Vzo4CrW/5HMKSrrxhMDMIi++0DpTQg0+QVM+NTCsJHMMr7wB0iEEzeqBTkyMYdSzl1y8GesR/1IMBuRLjos8eJpQsCIpE/phn8eyMifYY+u60XDs/XQEron2MIqTIC4NkV45bg==,iv:jynYWcMGBOxWRRERoiaa0mJ1SrWpRuoAmOZ8FiYil3s=,tag:m0zC/W2Og1CAk0iG/kRl1g==,type:str]
+        key: ENC[AES256_GCM,data:mNsTuy1sitvH0iAJMxW3DzfOHpe2wOctBVWuYlPRoooJ4ixdBoPlTsRVl9e8IEw9j9btn20lmWkS1uSzrfwO8oAuBm+bUdV5ZuRvzPhc/bXNOozUVHeuBLCUxaAsqUxIN01HXTUnRWSreM805212fQk9LElv0wTVr0jj9nhcXNVSEH9iGT8LvkXu43DpGRhERVg/X80vBzvCpTXaeHo+X7LmiLHtg7TmxmRPhkjznFOTph8+,iv:lRxKDv7d0V1RyWj+Z3uWTPySwg0870MyT/CaBqdlWKk=,tag:XJYHPuKsnLiXXd6P9baJlQ==,type:str]
+sops:
+    age:
+        - recipient: age14652kzh6k85uzhll84excakw5pwtrcku88z2jw0tt6c9rp5wcdqq9aeyt0
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSMGRQcWEzNDlML0hCTFFV
+            SGhlWGZZMnNLU2ZCNUF4bHVwYTA0NDJRc3pBCjNMS3lSTUtKSjVzUmJQQWk2NVlW
+            U1pkLzFrR1BzZ3VKSk01eXA3aGh3cVUKLS0tIEd4OHNZcm5sNmo3eXBJWDVRazNY
+            MHh1QzR4VXRRWTR0bzBwWThpRDZEZGMKpIX3DzED1m0FBtpNoBRxex/e9EUppXb3
+            oqeJLqGzHpQyGHwes1sfJaLcZcO4Jq9OKIseljoqDbREuous8A6YFw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-05-31T21:23:49Z"
+    mac: ENC[AES256_GCM,data:dSF3rJNl37mfCkzHAj8TWwTroN7cs/00wrVQoHXmWuaMmW4fstsG0H7Zp7H7zbPYmhXY8mOq0gzxugkGBIUMYx1AbzHqWaXNfH2Av0wHzm3CnIGemLvYzfVjK1L1Py+roQNLbol7yyzXtkSs5OIMzdBnbsK+8koSp1NDA5nL8lQ=,iv:DHcYHxMdr9W7ECsAH4uAcKYtneSNIglW4otWriQtLRo=,tag:jIbXNIx9vcnVweku1nq9ZA==,type:str]
+    encrypted_regex: ^(ca|crt|key)$
+    version: 3.12.2
