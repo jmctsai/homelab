@@ -1,9 +1,14 @@
 # ── Proxmox ────────────────────────────────────────────
-pve_endpoint = "https://192.168.1.199:8006/"
+pve_endpoint = "https://10.123.20.11:8006/"
 
 # ── Network ────────────────────────────────────────────
-gateway_ip  = "192.168.0.1"
-cluster_vip = "192.168.3.200"
+gateway_ip  = "10.123.20.1"
+cluster_vip = "10.123.20.10"
+
+# Remember to update networking related settings
+# - gitops/bootstrap/cilium_config.yaml
+# - just/cilium.just
+
 
 # ── Nodes ──────────────────────────────────────────────
 nodes = [
@@ -11,34 +16,34 @@ nodes = [
     node_name = "pve"
     hostname  = "talos-cp1"
     vm_id     = 201
-    ip        = "192.168.3.201"
+    ip        = "10.123.20.201"
     cores     = 2
     memory    = 2 * 1024
   },
-  {
-    node_name = "pve02"
-    hostname  = "talos-cp2"
-    vm_id     = 202
-    ip        = "192.168.3.202"
-    cores     = 2
-    memory    = 2 * 1024
-  },
-  {
-    node_name = "pve03"
-    hostname  = "talos-cp3"
-    vm_id     = 203
-    ip        = "192.168.3.203"
-    cores     = 2
-    memory    = 2 * 1024
-  },
-  {
-    node_name = "pve04"
-    hostname  = "talos-cp4"
-    vm_id     = 204
-    ip        = "192.168.3.204"
-    cores     = 2
-    memory    = 2 * 1024
-  }
+  # {
+  #   node_name = "pve02"
+  #   hostname  = "talos-cp2"
+  #   vm_id     = 202
+  #   ip        = "10.123.20.202"
+  #   cores     = 2
+  #   memory    = 2 * 1024
+  # },
+  # {
+  #   node_name = "pve03"
+  #   hostname  = "talos-cp3"
+  #   vm_id     = 203
+  #   ip        = "10.123.20.203"
+  #   cores     = 2
+  #   memory    = 2 * 1024
+  # },
+  # {
+  #   node_name = "pve04"
+  #   hostname  = "talos-cp4"
+  #   vm_id     = 204
+  #   ip        = "10.123.20.204"
+  #   cores     = 2
+  #   memory    = 2 * 1024
+  # }
 ]
 
 # ── Talos ──────────────────────────────────────────────

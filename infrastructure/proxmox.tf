@@ -37,7 +37,7 @@ resource "proxmox_virtual_environment_vm" "talos" {
     datastore_id = local.lvm_datastore[each.value.node_name]
     ip_config {
       ipv4 {
-        address = "${each.value.ip}/21"
+        address = "${each.value.ip}/24"
         gateway = var.gateway_ip
       }
     }

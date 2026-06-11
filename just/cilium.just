@@ -8,7 +8,7 @@ cilium: wait_for_api
         --namespace kube-system \
         --version 1.19.2 \
         --set kubeProxyReplacement=true \
-        --set k8sServiceHost=192.168.3.200 \
+        --set k8sServiceHost=10.123.20.10 \
         --set k8sServicePort=6443 \
         --set l2announcements.enabled=true \
         --set externalIPs.enabled=true \
@@ -18,7 +18,7 @@ cilium: wait_for_api
         --set securityContext.privileged=true
     kubectl rollout status daemonset/cilium -n kube-system
     kubectl apply -f bootstrap/cilium_config.yaml
-    talosctl health -n 192.168.3.200 --wait-timeout 10m
+    talosctl health -n 10.123.20.10 --wait-timeout 10m
 
 [private]
 wait_for_api:
