@@ -3,7 +3,7 @@ pve_endpoint = "https://10.123.20.11:8006/"
 
 # ── Network ────────────────────────────────────────────
 gateway_ip  = "10.123.20.1"
-cluster_vip = "10.123.20.10"
+cluster_vip = "10.123.20.200"
 
 # Remember to update networking related settings
 # - gitops/bootstrap/cilium_config.yaml
