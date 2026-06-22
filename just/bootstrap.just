@@ -8,7 +8,7 @@ full:
 [doc("Install sealed secrets controller")]
 sealed_secrets:
     helm install sealed-secrets \
-        --repo https://bitnami-labs.github.io/sealed-secrets \
+        --repo https://bitnami.github.io/sealed-secrets \
         sealed-secrets \
         --version 2.16.2 \
         --namespace sealed-secrets \
