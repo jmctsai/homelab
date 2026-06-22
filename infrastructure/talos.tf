@@ -33,8 +33,8 @@ data "talos_machine_configuration" "control_machine_config" {
     yamlencode({
       cluster = {
         allowSchedulingOnControlPlanes = true
-        network = { cni = { name = "none" } }  # disable Flannel
-        proxy   = { disabled = true }          # disable kube-proxy
+        network                        = { cni = { name = "none" } } # disable Flannel
+        proxy                          = { disabled = true }         # disable kube-proxy
       }
     }),
     # Network: VIP + nameservers

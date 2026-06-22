@@ -1,8 +1,8 @@
 # Variables are inputs provided from outside Terraform (tfvars, .env, CLI).
 # Add a variable here for any value that changes per environment or is secret.
 # ── Proxmox ────────────────────────────────────────────
-variable "pve_endpoint"  { type = string }
-variable "ssh_username"  { type = string }
+variable "pve_endpoint" { type = string }
+variable "ssh_username" { type = string }
 
 variable "api_token" {
   type      = string
@@ -15,7 +15,7 @@ variable "ssh_password" {
 }
 
 # ── Network ────────────────────────────────────────────
-variable "gateway_ip"  { type = string }
+variable "gateway_ip" { type = string }
 variable "cluster_vip" { type = string }
 
 # ── Nodes ──────────────────────────────────────────────
@@ -32,7 +32,7 @@ variable "nodes" {
 }
 
 # ── Talos ──────────────────────────────────────────────
-variable "talos_version"          { type = string }
+variable "talos_version" { type = string }
 variable "talos_image_factory_id" { type = string }
-variable "kubernetes_version"     { type = string }
-variable "cluster_name"           { type = string }
+variable "kubernetes_version" { type = string }
+variable "cluster_name" { type = string }
