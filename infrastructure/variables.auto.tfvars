@@ -21,28 +21,28 @@ nodes = [
     memory    = 2 * 1024
   },
   {
-   node_name = "pve02"
-   hostname  = "talos-cp2"
-   vm_id     = 202
-   ip        = "10.123.20.202"
-   cores     = 2
+    node_name = "pve02"
+    hostname  = "talos-cp2"
+    vm_id     = 202
+    ip        = "10.123.20.202"
+    cores     = 2
     memory    = 2 * 1024
  },
  {
     node_name = "pve03"
-   hostname  = "talos-cp3"
+    hostname  = "talos-cp3"
     vm_id     = 203
     ip        = "10.123.20.203"
     cores     = 2
     memory    = 2 * 1024
  },
  {
-   node_name = "pve04"
+    node_name = "pve04"
     hostname  = "talos-cp4"
     vm_id     = 204
     ip        = "10.123.20.204"
     cores     = 2
-  memory    = 2 * 1024
+    memory    = 2 * 1024
  }
 ]
 
