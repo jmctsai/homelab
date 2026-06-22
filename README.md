@@ -28,6 +28,15 @@ Kubernetes homelab setup with Talos Linux, automated with Terraform and GitOps w
 ## Stack Bootstrap
 
 ```
+sudo pacman -S \
+just \
+kubectl \
+talosctl \
+age \
+sops
+```
+
+```
 just bootstrap full
 ```
 
