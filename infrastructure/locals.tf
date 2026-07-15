@@ -6,7 +6,6 @@ locals {
     pve   = "local-lvm"
     pve02 = "local-lvm"
     pve03 = "local-lvm"
-    pve04 = "local-lvm"
   }
 
   # ── Nodes ────────────────────────────────────────────
